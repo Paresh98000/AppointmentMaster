@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ScrollView
+        android:id="@+id/scr_edit_service"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_e_s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/txt_title_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Edit Service"
+                android:textAlignment="center"
+                android:textColor="#9C27B0"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <TextView
+                android:id="@+id/txt_error_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:text="Error"
+                android:textAlignment="center"
+                android:textColor="#f00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_save_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/btn_create_e_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onSaveService"
+                    android:padding="10sp"
+                    android:text="Save"
+                    android:textColor="@color/darkblue"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/btn_cancel_e_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onDeleteService"
+                    android:padding="10sp"
+                    android:text="Delete"
+                    android:textColor="#f00"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_name_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Service Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15sp"
+                android:textColor="@color/darkblue"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_ser_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15sp"
+                android:text="Service Type : "
+                android:textColor="#045F57"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <Spinner
+                android:id="@+id/spinner_serviceType_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"></Spinner>
+
+            <TextView
+                android:id="@+id/txt_desc_ser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15sp"
+                android:text="Description of Service : "
+                android:textColor="#045F57"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/edit_ser_desc_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="describe your service"
+                android:inputType="text"
+                android:maxLines="20"
+                android:minLines="3"
+                android:padding="15sp"
+                android:textColor="@color/darkblue"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/txt_ser_desc_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="horizontal"
+                android:freezesText="false"
+
+                android:padding="15sp"
+                android:requiresFadingEdge="horizontal"
+                android:scrollHorizontally="true"
+                android:singleLine="false"
+                android:textColor="@color/darkblue"
+                android:textSize="25sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_phone_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15sp"
+                android:text="Phone : "
+                android:textColor="#045F57"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_contry_phone_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:padding="5sp"
+                    android:text="+91"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_phone_e_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="phone number"
+                    android:inputType="phone"
+                    android:padding="10sp"
+                    android:textColor="@color/darkblue"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_address_e_s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="15sp"
+                android:text="Address : "
+                android:textColor="#045F57"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+
+
+            <EditText
+                android:id="@+id/edit_s_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="City"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15sp"
+                android:textColor="@color/darkblue"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

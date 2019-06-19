@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/constraintview"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1sp"
+        android:layout_marginEnd="1sp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="UserName"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:onClick="onLogOutButtonPressed"
+                android:text="Logout"
+                android:textColor="#FF000D"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_linearlayour"
+            android:orientation="horizontal"
+            android:padding="1sp">
+
+            <LinearLayout
+                android:id="@+id/linear_apoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_1_white_back"
+                android:gravity="center"
+                android:onClick="onAppointmentTabClicked"
+                android:orientation="vertical"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp">
+
+                <ImageView
+                    android:id="@+id/imgbtn_Tab_Appointment"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginRight="10sp"
+                    android:gravity="bottom"
+                    android:onClick="onAppointmentTabClicked"
+                    android:text="APPOINTS"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:srcCompat="@mipmap/appointment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3sp"
+                    android:onClick="onAppointmentTabClicked"
+                    android:text="Appointment"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_serv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onServiceTabClicked"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imbtn_Service"
+                    android:layout_width="45sp"
+                    android:layout_height="40sp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginRight="10sp"
+                    android:gravity="bottom"
+                    android:onClick="onServiceTabClicked"
+                    android:text="SERVICE"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:srcCompat="@mipmap/service" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3sp"
+                    android:onClick="onServiceTabClicked"
+                    android:text="Service"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_schedule"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onScheduleTabClicked"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgbtn_Schedule"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="3sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginRight="10sp"
+                    android:gravity="bottom"
+                    android:onClick="onScheduleTabClicked"
+                    android:text="SCHEDULE"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:srcCompat="@mipmap/schedule" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3sp"
+                    android:onClick="onScheduleTabClicked"
+                    android:text="Schedule"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_connection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not Connected"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/frag_appoinm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3sp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_count_total_appointment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/app_count_txt"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkblue"
+                        android:textSize="24sp" />
+
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lst_view_appointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                    android:divider="@color/colorPrimary"
+                    android:dividerHeight="3dp"
+                    android:padding="5sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frag_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_total_service_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="10 Services"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkblue"
+                        android:textSize="24sp" />
+
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lst_view_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                    android:divider="@color/colorPrimary"
+                    android:dividerHeight="3dp"
+                    android:padding="3dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frag_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:windowBackground"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_total_schedules"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="10 Services"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkblue"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Appointments"
+                            android:textColor="@color/blue"
+                            android:textSize="20sp" />
+
+                        <ListView
+                            android:id="@+id/lst_view_appointments_in_sch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                            android:divider="@color/colorPrimary"
+                            android:dividerHeight="3dp"
+                            android:padding="3sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Schedules"
+                            android:textColor="@color/blue"
+                            android:textSize="20sp" />
+
+                        <ListView
+                            android:id="@+id/lst_view_schedule"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                            android:divider="@color/colorPrimary"
+                            android:dividerHeight="3dp"
+                            android:padding="3sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fab_schedule_valu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_Add_Schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onNewScheduleClicked"
+            android:scaleType="centerInside"
+            android:tooltipText="@string/n_ser"
+            app:backgroundTint="@color/browser_actions_bg_grey"
+            app:maxImageSize="60dp"
+            app:srcCompat="@mipmap/schedule_add" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fab_service_valu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_Add_Service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onNewServiceClicked"
+            android:scaleType="center"
+            android:src="@drawable/add_service"
+            android:tooltipText="@string/n_ser"
+            app:backgroundTint="@color/magenta"
+            app:maxImageSize="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fab_appoint_valu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_Add_Appointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onNewAppointmentClicked"
+            android:scaleType="centerCrop"
+            app:borderWidth="0dp"
+            app:maxImageSize="48dp"
+            app:srcCompat="@mipmap/new_appointment" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

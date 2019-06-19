@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <ScrollView
+        android:id="@+id/scrl_e_sch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        >
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Schedule"
+                android:textAlignment="center"
+                android:textSize="45sp"
+                android:textColor="#4C00F0"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp" />
+            <TextView
+                android:id="@+id/txt_error_e_sch"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Error"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5sp"
+                android:textColor="#f00"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+                <Button
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:background="#059"
+                    android:onClick="onSaveSchedule"
+                    android:text="Save"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:background="#f11"
+                    android:onClick="onDeleteSchedule"
+                    android:text="Delete"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+                <EditText
+                    android:id="@+id/edit_name_e_sch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="20"
+                    android:hint="Schedule name"
+                    android:textColor="#000"
+                    android:textSize="25sp"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/txt_date_from_e_sch"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="Date From :"
+                    android:textSize="20sp"
+                    android:textColor="#000"/>
+
+                <DatePicker
+                    android:id="@+id/edit_datef_e_sch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/txt_date_to_e_sch"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="Date To :"
+                    android:textSize="20sp"
+                    android:textColor="#000"/>
+
+                <DatePicker
+                    android:id="@+id/edit_datet_e_sch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/txt_place_e_sch"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="Place :"
+                    android:textSize="20sp"
+                    android:textColor="#000"/>
+
+                <EditText
+                    android:id="@+id/edit_place_e_sch"
+                    android:layout_width="200sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:ems="10"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp">
+
+                <TextView
+                    android:id="@+id/txt_Description_e_sch"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:text="Description :"
+                    android:textSize="20sp"
+                    android:textColor="#000"/>
+
+                <EditText
+                    android:id="@+id/edit_desc_e_sch"
+                    android:layout_width="200sp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:ems="10"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

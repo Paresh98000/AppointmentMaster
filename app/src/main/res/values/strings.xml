@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppointmentMaster</string>
+
+    <string name="add_service">Add new Service</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="apnmnt">Appointments</string>
+    <string name="app_count_txt">10 Appointments</string>
+    <string name="n_ser">Add New Service</string>
+    <string name="textview">TextView</string>
+</resources>
